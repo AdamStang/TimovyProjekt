@@ -131,6 +131,14 @@ main{
     margin-left: 45%;
 }
 
+.av h2{
+    font-size: 1.125rem;
+}
+
+.tyzdne_wrapper .no_margin{
+    margin-bottom: 10px;
+}
+
 /*   ========================  MEDIA QUERIES  ===========================   */
 @media all and (min-width: 320px){
     .tyzden ul,
@@ -138,11 +146,19 @@ main{
         padding-left: 5%;
         padding-right: 5%;
     }
+    .tyzden ol{
+        padding-left: 15%;
+        padding-right: 5%;
+    }
     .tyzdne{
         width: 90%;
     }
     .tyzdne_wrapper{
         padding: 20px;
+    }
+    .tim{
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
 
@@ -152,6 +168,10 @@ main{
     }
     .tyzdne_wrapper{
         padding: 20px;
+    }
+    .tim{
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
 
