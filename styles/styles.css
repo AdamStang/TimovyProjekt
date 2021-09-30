@@ -14,6 +14,7 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 header{
@@ -23,38 +24,81 @@ header{
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
     box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.15);
     z-index: 10;;
 }
 
 .nadpis{
-    margin: 10%;
     font-size: 2.5rem;
 }
 
-footer{
-    width: 100%;
-    height: 50px;
-    color: white;
-    background: cornflowerblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    margin-top: auto; 
-    box-shadow: 0px -2px 8px 4px rgba(0, 0, 0, 0.15);
-}
-
 main{
-    width: 100%;
+    width: 100vw;
     min-height: calc(100vh - 150px);
     background: #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_content{
+    flex: 1;
+}
+
+aside{
+    flex: 1;
+}
+
+/*   ===========  ZADANIE  ============   */
+.zadanie_wrapper{
+    
+}
+
+.zadanie_nadpis,
+.stav_nadpis,
+.tyzdne_nadpis{
+    margin: 25px 0  25px 0;
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 2rem;
+}
+
+.zadanie{
+    
+}
+
+.zadanie .card{
+    margin: 0 5% 50px 5%;
+}
+
+.zadanie p{
+    text-align: justify;
+}
+
+.zadanie ol{
+    margin-left: 10%;
+    text-align: justify;
+}
+/*   ========X==================X========   */
+
+/*   ===========  CLENOVIA  =============   */
+.clenovia_timu_nadpis{
+    color: cornflowerblue;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.clenovia_timu_wrapper{
+    background: #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .tim{
     display: flex;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .card{
@@ -79,95 +123,66 @@ main{
     margin-bottom: 10px;
 }
 
-.clenovia_timu_nadpis{
-    color: cornflowerblue;
-    margin-top: 25px;
-    text-align: center;
-    font-size: 2rem;
+.av h2{
+    font-size: 1.125rem;
 }
+/*   ========X==================X========   */
 
-.clenovia_timu_wrapper{
-    background: #ccc;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
+/*   ============  TYZDNE  =============   */
 .tyzdne_wrapper{
     width: 100%;
-    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.tyzdne_wrapper h2{
-    margin-bottom: 40px;
-}
-
 .tyzdne{
-    width: 60%;
+    width: 90%;
 }
 
 .tyzden{
-    padding: 5%;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
 .tyzden h2{
-    margin-left: 40%;
+    margin-left: 20%;
 }
 
 .tyzden li,
 .tyzden p{
     font-size: 1.25rem;
 }
+/*   ========X==================X========   */
 
-.stav{
-    background: #ccc;
+/*   =============  STAV  ==============   */
+.stav .card{
+    margin: 0 5% 0 5%;
 }
+/*   ========X==================X========   */
 
-.stav .card h2{
-    margin-left: 45%;
-}
-
-.av h2{
-    font-size: 1.125rem;
-}
-
-.tyzdne_wrapper .no_margin{
-    margin-bottom: 10px;
+footer{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin-top: auto; 
+    box-shadow: 0px -2px 8px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*   ========================  MEDIA QUERIES  ===========================   */
-@media all and (min-width: 320px){
-    .tyzden ul,
-    .tyzden p{
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .tyzden ol{
-        padding-left: 15%;
-        padding-right: 5%;
-    }
-    .tyzdne{
-        width: 90%;
-    }
-    .tyzdne_wrapper{
-        padding: 20px;
-    }
-    .tim{
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-}
-
 @media all and (min-width: 540px){
-    .tyzdne{
-        width: 90%;
+    .zadanie .card{
+        margin: 0 15% 50px 15%;
     }
-    .tyzdne_wrapper{
-        padding: 20px;
+    .stav .card{
+        margin: 0 15% 0 15%;
+    }
+    .tyzdne{
+        width: 70%;
     }
     .tim{
         margin-left: 20%;
@@ -176,14 +191,48 @@ main{
 }
 
 @media all and (min-width: 768px){
-    .tyzdne{
-        width: 80%;
+    .tim{
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
 
 @media all and (min-width: 1024px){
-    .tyzdne{
-        width: 60%;
+    main{
+        flex-direction: row;
+    }
+    .main_content{
+        width: 70%;
+    }
+    aside{
+        width: 30%;
+        background: #ccc;
+    }
+    .tim{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .clenovia_timu_wrapper{
+        background: #eee;
+        margin-bottom: 100px;
+    }
+    .tyzdne_wrapper{
+        flex: 1;
+        max-height: 500px;
+        overflow-y: auto;
+    }
+    header{
+        justify-content: flex-start;
+    }
+    .nadpis{
+        margin-left: 10%;
+    }
+    .zadanie .card{
+        background: #eee;
+        box-shadow: 0px -2px 8px 4px rgba(0, 0, 0, 0);
+    }
+    .zadanie_nadpis{
+        margin-top: 50px;
     }
 }
 /*   ==============X======================================X==============   */

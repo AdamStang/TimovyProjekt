@@ -3,8 +3,8 @@ $(document).ready(function(){
         dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         responsive: [
             {
                 breakpoint: 1024,
@@ -18,8 +18,8 @@ $(document).ready(function(){
             {
                 breakpoint: 748,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
