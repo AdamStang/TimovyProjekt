@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 html{
@@ -50,10 +51,6 @@ aside{
 }
 
 /*   ===========  ZADANIE  ============   */
-.zadanie_wrapper{
-    
-}
-
 .zadanie_nadpis,
 .stav_nadpis,
 .tyzdne_nadpis{
@@ -64,7 +61,7 @@ aside{
 }
 
 .zadanie{
-    
+
 }
 
 .zadanie .card{
@@ -138,6 +135,20 @@ aside{
 
 .tyzdne{
     width: 90%;
+    padding: 10px;
+}
+
+.tyzdne .card{
+    margin: 10px 0 10px 0;
+    display: block;
+}
+
+.tyzdne .card h2{
+    text-align: center;
+}
+
+.tyzdne .card ul{
+    padding-left: 10%;
 }
 
 .tyzden{
@@ -152,6 +163,16 @@ aside{
 .tyzden li,
 .tyzden p{
     font-size: 1.25rem;
+}
+
+.zapisnica_link{
+    text-decoration: none;
+    color: cornflowerblue;
+    font-size: 18px;
+}
+
+.fa-file-pdf{
+    color: #eb4034;
 }
 /*   ========X==================X========   */
 
@@ -172,6 +193,27 @@ footer{
     margin-top: auto; 
     box-shadow: 0px -2px 8px 4px rgba(0, 0, 0, 0.15);
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bbb; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: cornflowerblue; 
+  }
 
 /*   ========================  MEDIA QUERIES  ===========================   */
 @media all and (min-width: 540px){
@@ -214,24 +256,27 @@ footer{
     }
     .clenovia_timu_wrapper{
         background: #eee;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     .tyzdne_wrapper{
         flex: 1;
-        max-height: 500px;
+    }
+    .tyzdne{
+        max-height: 650px;
         overflow-y: auto;
     }
     header{
         justify-content: flex-start;
     }
     .nadpis{
-        margin-left: 10%;
+        margin-left: 12%;
     }
     .zadanie .card{
         background: #eee;
         box-shadow: 0px -2px 8px 4px rgba(0, 0, 0, 0);
     }
-    .zadanie_nadpis{
+    .zadanie_nadpis,
+    .stav_nadpis{
         margin-top: 50px;
     }
 }
