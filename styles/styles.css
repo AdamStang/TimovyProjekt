@@ -27,7 +27,7 @@ header{
     align-items: center;
     justify-content: center;
     box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.15);
-    z-index: 10;;
+    z-index: 10;
 }
 
 .nadpis{
@@ -50,6 +50,21 @@ aside{
     flex: 1;
 }
 
+.tlac{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 2%;
+}
+
+table{
+    display: none;
+}
+
 /*   ===========  ZADANIE  ============   */
 .zadanie_nadpis,
 .stav_nadpis,
@@ -58,6 +73,11 @@ aside{
     text-align: center;
     color: cornflowerblue;
     font-size: 2rem;
+}
+
+.zadanie_nadpis a{
+    text-decoration: none;
+    color: cornflowerblue;
 }
 
 .zadanie{
@@ -92,6 +112,10 @@ aside{
     padding-bottom: 10px;
 }
 
+.clenovia_timu_wrapper .card{
+    transition: 0.5s ease;
+}
+
 .tim{
     display: flex;
     margin-left: 10%;
@@ -105,7 +129,7 @@ aside{
     align-items: center;
     margin: 30px;
     padding: 20px;
-    box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.15);
     background: white;
     border-radius: 10px;
 }
@@ -122,6 +146,10 @@ aside{
 
 .av h2{
     font-size: 1.125rem;
+}
+.av p{
+    text-align: left;
+    width: 100%;
 }
 /*   ========X==================X========   */
 
@@ -141,6 +169,14 @@ aside{
 .tyzdne .card{
     margin: 10px 0 10px 0;
     display: block;
+    transition: 0.5s ease;
+}
+
+.tyzdne .card:hover,
+.stav .card:hover,
+.clenovia_timu_wrapper .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tyzdne .card h2{
@@ -179,6 +215,7 @@ aside{
 /*   =============  STAV  ==============   */
 .stav .card{
     margin: 0 5% 0 5%;
+    transition: 0.5s ease;
 }
 /*   ========X==================X========   */
 
@@ -224,7 +261,8 @@ footer{
         margin: 0 15% 0 15%;
     }
     .tyzdne{
-        width: 70%;
+        width: 100%;
+        padding: 10px 15%;
     }
     .tim{
         margin-left: 20%;
@@ -262,11 +300,13 @@ footer{
         flex: 1;
     }
     .tyzdne{
+        width: 100%;
+        padding: 10px 15%;
         max-height: 650px;
         overflow-y: auto;
     }
     header{
-        justify-content: flex-start;
+        justify-content: space-between;
     }
     .nadpis{
         margin-left: 12%;
@@ -278,6 +318,39 @@ footer{
     .zadanie_nadpis,
     .stav_nadpis{
         margin-top: 50px;
+    }
+}
+/*   ==============X======================================X==============   */
+
+/*   ============================  PRINT  ===============================   */
+@media print{
+    header{
+        box-shadow: none;
+    }
+    .tlac{
+        display: none;
+    }
+    .zadanie .card{
+        box-shadow: none;
+    }
+    footer{
+        display: none;
+    }
+    .clenovia_timu_wrapper{
+        display: none;
+    }
+    table{
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th,
+    td{
+        border: 2px solid black;
+        padding: 5px 10px;
+    }
+    .stav{
+        margin-bottom: 40px;
     }
 }
 /*   ==============X======================================X==============   */

@@ -3,9 +3,18 @@ $(document).ready(function(){
         dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         responsive: [
+            {
+                breakpoint: 1640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
             {
                 breakpoint: 1024,
                 settings: {
@@ -53,4 +62,9 @@ $(document).ready(function(){
             }
         ]
     });
+});
+
+var tlac = document.querySelector(".tlac");
+tlac.addEventListener("click", (e) => {
+    window.print();
 });
