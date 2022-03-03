@@ -210,6 +210,36 @@ table{
 .fa-file-pdf{
     color: #eb4034;
 }
+
+.buttons{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.btn{
+    width: 50%;
+    padding: 10px 0;
+    text-align: center;
+    color: cornflowerblue;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 20px;
+}
+
+.active{
+    background: cornflowerblue;
+    color: white;
+}
+
+.hide{
+    display: none;
+}
 /*   ========X==================X========   */
 
 /*   =============  STAV  ==============   */
@@ -286,7 +316,8 @@ footer{
     }
     aside{
         width: 30%;
-        background: #ccc;
+        /* background: #dedede; */
+        box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.15);
     }
     .tim{
         margin-left: 15%;
@@ -302,7 +333,7 @@ footer{
     .tyzdne{
         width: 100%;
         padding: 10px 15%;
-        max-height: 650px;
+        max-height: 450px;
         overflow-y: auto;
     }
     header{
@@ -314,10 +345,12 @@ footer{
     .zadanie .card{
         background: #eee;
         box-shadow: 0px -2px 8px 4px rgba(0, 0, 0, 0);
+        margin: 0 15% 0 15%;
+        padding: 0 20px;
     }
     .zadanie_nadpis,
     .stav_nadpis{
-        margin-top: 50px;
+        margin-top: 20px;
     }
 }
 /*   ==============X======================================X==============   */
@@ -351,6 +384,9 @@ footer{
     }
     .stav{
         margin-bottom: 40px;
+    }
+    .buttons{
+        display: none;
     }
 }
 /*   ==============X======================================X==============   */

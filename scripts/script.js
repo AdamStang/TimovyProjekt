@@ -68,3 +68,22 @@ var tlac = document.querySelector(".tlac");
 tlac.addEventListener("click", (e) => {
     window.print();
 });
+
+var lsBtn = document.querySelector('.btn-ls');
+var zsBtn = document.querySelector('.btn-zs');
+var zsSem = document.querySelector('.zs');
+var lsSem = document.querySelector('.ls');
+
+lsBtn.addEventListener("click", (e) => {
+    lsSem.classList.remove("hide");
+    zsSem.classList.add("hide");
+    lsBtn.classList.add("active");
+    zsBtn.classList.remove("active");
+});
+
+zsBtn.addEventListener("click", (e) => {
+    zsSem.classList.remove("hide");
+    lsSem.classList.add("hide");
+    zsBtn.classList.add("active");
+    lsBtn.classList.remove("active");
+});
